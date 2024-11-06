@@ -1,0 +1,45 @@
+/* Font settings */
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("./fonts/SFProDisplay-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("./fonts/SFProDisplay-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* General app layout */
+body, .app {
+  background: linear-gradient(180deg, #282728 0%, #5a595a 100%);
+  color: #fff;
+  font-family: 'SF Pro Display', sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* Shared styling for section headers */
+.section-header {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.7);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 1rem 0 0.5rem;
+}
+
+.section-header::after {
+  content: "";
+  display: block;
+  width: 80%;
+  height: 2px;
+  margin: 0.5rem auto 0;
+  background-color: rgba(255, 255, 255, 0.3);
+}

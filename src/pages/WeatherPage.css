@@ -1,0 +1,28 @@
+.weather-page {
+    background-repeat: no-repeat;
+    animation: backgroundPan 30s linear infinite;
+}
+
+.weather-clear {
+    background-image: url('../assets/images/clear-sky.jpg');
+}
+
+.weather-rain {
+    background-image: url('../assets/images/rain.jpg');
+}
+
+.weather-default {
+    background-image: url('../assets/images/default.jpg');
+}
+
+@keyframes backgroundPan {
+    0% {
+        background-position: center top;
+    }
+    50% {
+        background-position: center bottom;
+    }
+    100% {
+        background-position: center top;
+    }
+}

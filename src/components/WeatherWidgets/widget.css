@@ -1,0 +1,130 @@
+.widget-container {
+    background: linear-gradient(180deg, rgba(133, 132, 133, 0.8), rgba(182, 180, 182, 0.8)), 
+                url('../assets/images/clear-sky.jpg'); /* Replace with dynamic path if needed */
+    background-size: cover;
+    background-position: center;
+    animation: backgroundPanHorizontal 30s linear infinite;
+    border: 2px solid #d1d1d1;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    margin: 0.3rem;
+    width: 80%;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-family: 'SF Pro Display', sans-serif;
+    position: relative;
+}
+
+/* Define the horizontal animation for the widget background */
+@keyframes backgroundPanHorizontal {
+    0% {
+        background-position: left center;
+    }
+    50% {
+        background-position: right center;
+    }
+    100% {
+        background-position: left center;
+    }
+}
+
+.widget-title {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.8);
+    text-transform: uppercase;
+    margin: 0;
+    padding-top: 0;
+    line-height: 1;
+}
+
+.widget-data {
+    font-size: 2rem;
+    font-weight: 400;
+    color: #ffffff;
+    align-self: flex-start;
+    margin-top: 1rem;
+    line-height: 1;
+}
+
+.widget-subtext {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.6);
+    align-self: flex-start;
+    line-height: 1.2;
+    margin-top: 1rem;
+}
+
+.widget-icon {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) invert(1);
+    margin-right: 0.3rem;
+}
+
+.humidity-widget {
+    grid-column: span 2;
+    width: 90%; 
+    height: 140px; 
+    justify-self: center;
+}
+
+.humidity-status-bar {
+    position: relative;
+    width: 100%;
+    height: 8px;
+    background: linear-gradient(to right, #00c6ff, #00ff72, #ffdd00, #ff7e00, #ff0072); /* Gradient from green to red */
+    border-radius: 10px; 
+    margin-top: 0.5rem;
+    overflow: hidden;
+}
+
+.humidity-indicator {
+    position: absolute;
+    top: 0;
+    width: 12px;
+    height: 12px; 
+    background-color: #ffffff; 
+    border-radius: 50%; 
+    transform: translateY(-2px); 
+    transition: left 0.3s ease; 
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2); 
+}
+
+.sunrise-sunset-widget .widget-title {
+    font-size: 0.875rem;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.7);
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    align-self: flex-start;
+}
+
+.sunrise-sunset-widget .sunrise-time,
+.sunrise-sunset-widget .sunset-time {
+    font-size: 1rem;
+    color: white;
+    margin: 0;
+    margin-top: 1rem;
+}
+
+.sunrise-sunset-widget .larger {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+
+
+
+
+
+
+
+
+
+  
