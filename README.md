@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Weather-App
 
 ## Project Overview
@@ -52,7 +51,7 @@ VITE_BASE_URL=https://api.openweathermap.org/data/2.5
 ## Open in Browser
 
 - Once the server is running, open http://localhost:5173 in your browser to view the application.
-=======
+
 
 
 
