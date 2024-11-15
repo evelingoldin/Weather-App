@@ -30,23 +30,24 @@ const Home: React.FC = () => {
       try {
         const data = await fetchWeatherByCity(city);
         const kelvinToFahrenheit = (kelvin: number) => Math.round((kelvin - 273.15) * 9/5 + 32);
-  
+
         const newLocation: Location = {
-          name: data.name || "Unknown Location",
-          temperature: kelvinToFahrenheit(data.main?.temp ?? 273.15), 
+          name: data.name,
+          temperature: kelvinToFahrenheit(data.main.temp),
           description: data.weather?.[0]?.description || "No description available",
           high: kelvinToFahrenheit(data.main?.temp_max ?? 273.15),
           low: kelvinToFahrenheit(data.main?.temp_min ?? 273.15),
         };
-  
+
         const updatedLocations = [...locations, newLocation];
         setLocations(updatedLocations);
+        setCity("");
+        localStorage.setItem("savedCities", JSON.stringify(updatedLocations));
       } catch (error) {
         console.error("Error fetching weather data:", error);
       }
     }
   };
-  
 
   const handleLocationClick = async (location: Location) => {
     try {
